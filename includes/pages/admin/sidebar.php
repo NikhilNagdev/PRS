@@ -64,7 +64,7 @@
                     <div class="collapse" id="base">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="">
+                                <a href="index.php?src=add-manager">
                                     <span class="sub-item">Add Manager</span>
                                 </a>
                             </li>

@@ -55,187 +55,9 @@ require_once "../../document_root.php";
         <!-- End Logo Header -->
 
         <!-- Navbar Header -->
-        <nav class="navbar navbar-header navbar-expand-lg">
-
-            <div class="container-fluid">
-                <div class="collapse" id="search-nav">
-                    <form class="navbar-left navbar-form nav-search mr-md-3">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <button type="submit" class="btn btn-search pr-1">
-                                    <i class="fa fa-search search-icon"></i>
-                                </button>
-                            </div>
-                            <input type="text" placeholder="Search ..." class="form-control">
-                        </div>
-                    </form>
-                </div>
-                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-                    <li class="nav-item toggle-nav-search hidden-caret">
-                        <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown hidden-caret">
-                        <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                        <ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
-                            <li>
-                                <div class="dropdown-title d-flex justify-content-between align-items-center">
-                                    Messages
-                                    <a href="#" class="small">Mark all as read</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="message-notif-scroll scrollbar-outer">
-                                    <div class="notif-center">
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="../../assets/img/jm_denis.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Jimmy Denis</span>
-                                                <span class="block">
-														How are you ?
-													</span>
-                                                <span class="time">5 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="../../assets/img/chadengle.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Chad</span>
-                                                <span class="block">
-														Ok, Thanks !
-													</span>
-                                                <span class="time">12 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="../../assets/img/mlane.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Jhon Doe</span>
-                                                <span class="block">
-														Ready for the meeting today...
-													</span>
-                                                <span class="time">12 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="../../assets/img/talha.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-                                                <span class="subject">Talha</span>
-                                                <span class="block">
-														Hi, Apa Kabar ?
-													</span>
-                                                <span class="time">17 minutes ago</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown hidden-caret">
-                        <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-bell"></i>
-                            <span class="notification">4</span>
-                        </a>
-                        <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
-                            <li>
-                                <div class="dropdown-title">You have 4 new notification</div>
-                            </li>
-                            <li>
-                                <div class="notif-scroll scrollbar-outer">
-                                    <div class="notif-center">
-                                        <a href="#">
-                                            <div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
-                                            <div class="notif-content">
-													<span class="block">
-														New user registered
-													</span>
-                                                <span class="time">5 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
-                                            <div class="notif-content">
-													<span class="block">
-														Rahmad commented on Admin
-													</span>
-                                                <span class="time">12 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-img">
-                                                <img src="../../assets/img/profile2.jpg" alt="Img Profile">
-                                            </div>
-                                            <div class="notif-content">
-													<span class="block">
-														Reza send messages to you
-													</span>
-                                                <span class="time">12 minutes ago</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="notif-icon notif-danger"> <i class="fa fa-heart"></i> </div>
-                                            <div class="notif-content">
-													<span class="block">
-														Farrah liked Admin
-													</span>
-                                                <span class="time">17 minutes ago</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown hidden-caret">
-                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-                            <div class="avatar-sm">
-                                <img src="../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user animated fadeIn">
-                            <li>
-                                <div class="user-box">
-                                    <div class="avatar-lg"><img src="../../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
-                                    <div class="u-text">
-                                        <h4>Hizrian</h4>
-                                        <p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">My Profile</a>
-                                <a class="dropdown-item" href="#">My Balance</a>
-                                <a class="dropdown-item" href="#">Inbox</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Logout</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
+        <?php
+            require_once $_SERVER['DOCUMENT_ROOT']."includes/navigation.php";
+        ?>
         <!-- End Navbar -->
     </div>
 
@@ -247,94 +69,75 @@ require_once "../../document_root.php";
 
     <div class="main-panel">
         <div class="content">
-            <div class="page-inner">
-                <div class="page-header">
-                    <h4 class="page-title">Dashboard</h4>
-                    <div class="btn-group btn-group-page-header ml-auto">
-                        <button type="button" class="btn btn-light btn-round btn-page-header-dropdown dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-ellipsis-h"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <div class="arrow"></div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
+
+            <div class="panel-header bg-dark-gradient" style="background: linear-gradient(-45deg,#0a0b11,#1f283e)">
+                <div class="page-inner py-5">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div>
+                        </div>
+                        <div class="text-white total-marks">
+                            <h2 class="pull-right">Dashboard<span class="marks-text"></span></h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
+            </div>
+
+            <div class="page-inner" style="margin-top: -80px;">
+                <div class="page-header">
+                    <h4 class="page-title text-white"></h4>
+                </div>
+                <div class="row row-card-no-pd">
+                    <div class="col-sm-6 col-md-4">
                         <div class="card card-stats card-round">
                             <div class="card-body ">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-primary bubble-shadow-small">
-                                            <i class="fas fa-users"></i>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="icon-big text-center">
+                                            <i class="flaticon-chart-pie text-warning"></i>
                                         </div>
                                     </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
+                                    <div class="col col-stats">
                                         <div class="numbers">
                                             <p class="card-category">Managers</p>
-                                            <h4 class="card-title">1,294</h4>
+                                            <h4 class="card-title">150</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-4">
                         <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-info bubble-shadow-small">
-                                            <i class="fas fa-users-cog"></i>
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="icon-big text-center">
+                                            <i class="flaticon-coins text-success"></i>
                                         </div>
                                     </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
+                                    <div class="col col-stats">
                                         <div class="numbers">
                                             <p class="card-category">Team Heads</p>
-                                            <h4 class="card-title">1303</h4>
+                                            <h4 class="card-title">3</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-sm-6 col-md-4">
                         <div class="card card-stats card-round">
                             <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-success bubble-shadow-small">
-                                            <i class="fas fa-users"></i>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="icon-big text-center">
+                                            <i class="fas fa-users text-danger"></i>
                                         </div>
                                     </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
+                                    <div class="col col-stats">
                                         <div class="numbers">
                                             <p class="card-category">Employees</p>
-                                            <h4 class="card-title">1,345</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="far fa-check-circle"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Total Workers</p>
-                                            <h4 class="card-title">576</h4>
+                                            <h4 class="card-title">23</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -342,7 +145,8 @@ require_once "../../document_root.php";
                         </div>
                     </div>
                 </div>
-                <div class="row">
+
+                    <div class="row">
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-header">

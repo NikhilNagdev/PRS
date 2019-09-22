@@ -241,7 +241,7 @@ require_once "../../document_root.php";
 
     <!-- Sidebar -->
     <?php
-    include_once $_SERVER['DOCUMENT_ROOT']."/includes/pages/admin/sidebar.php";
+    include_once $_SERVER['DOCUMENT_ROOT']."/includes/pages/manager/sidebar.php";
     ?>
     <!-- End Sidebar -->
 

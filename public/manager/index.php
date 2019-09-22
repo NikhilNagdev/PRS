@@ -5,7 +5,7 @@ require_once "../../document_root.php";
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Azzara Bootstrap 4 Admin Dashboard</title>
+    <title>Performance rating system</title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <link rel="icon" href="../../assets/img/icon.ico" type="image/x-icon"/>
 
@@ -38,7 +38,7 @@ require_once "../../document_root.php";
         <div class="logo-header">
 
             <a href="index.html" class="logo">
-                <img src="../../assets/img/logoazzara.svg" alt="navbar brand" class="navbar-brand">
+                <h1 class="navbar-brand text-white">Rate It!</h1>
             </a>
             <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">

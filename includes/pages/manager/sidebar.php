@@ -15,7 +15,7 @@ require_once ($_SERVER['DOCUMENT_ROOT']."document_root.php");
                     <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
 									Hizrian
-									<span class="user-level">Administrator</span>
+									<span class="user-level">Manager</span>
 									<span class="caret"></span>
 								</span>
                     </a>

@@ -84,8 +84,8 @@ require_once ($_SERVER['DOCUMENT_ROOT']."document_root.php");
                     <div class="collapse" id="tables">
                         <ul class="nav nav-collapse">
                             <li>
-                                <a href="tables/tables.html">
-                                    <span class="sub-item">Add Ratings</span>
+                                <a id="add-ratings" class="add-ratings" href="" onclick="return false;">
+                                    <span class="sub-item">Add Ratingss</span>
                                 </a>
                             </li>
                             <li>

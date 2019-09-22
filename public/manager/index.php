@@ -24,9 +24,9 @@ require_once "../../document_root.php";
     <!-- CSS Files -->
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/azzara.min.css">
+    <link rel="stylesheet" href="../../assets/css/manager-style.css">
 
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="../../assets/css/demo.css">
+
 </head>
 <body>
 <div class="wrapper">
@@ -379,39 +379,10 @@ require_once "../../document_root.php";
 
     </div>
 
-    <!-- Custom template | don't include it in your project! -->
-    <div class="custom-template">
-        <div class="title">Settings</div>
-        <div class="custom-content">
-            <div class="switcher">
-                <div class="switch-block">
-                    <h4>Topbar</h4>
-                    <div class="btnSwitch">
-                        <button type="button" class="changeMainHeaderColor" data-color="blue"></button>
-                        <button type="button" class="selected changeMainHeaderColor" data-color="purple"></button>
-                        <button type="button" class="changeMainHeaderColor" data-color="light-blue"></button>
-                        <button type="button" class="changeMainHeaderColor" data-color="green"></button>
-                        <button type="button" class="changeMainHeaderColor" data-color="orange"></button>
-                        <button type="button" class="changeMainHeaderColor" data-color="red"></button>
-                    </div>
-                </div>
-                <div class="switch-block">
-                    <h4>Background</h4>
-                    <div class="btnSwitch">
-                        <button type="button" class="changeBackgroundColor" data-color="bg2"></button>
-                        <button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>
-                        <button type="button" class="changeBackgroundColor" data-color="bg3"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="custom-toggle">
-            <i class="flaticon-settings"></i>
-        </div>
-    </div>
-    <!-- End Custom template -->
-</div>
-</div>
+<?php
+    include_once "../../includes/modals/add-ratings-modal.php";
+?>
+
 <!--   Core JS Files   -->
 <script src="../../assets/js/core/jquery.3.2.1.min.js"></script>
 <script src="../../assets/js/core/popper.min.js"></script>
@@ -461,6 +432,7 @@ require_once "../../document_root.php";
 <!-- Azzara DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/setting-demo.js"></script>
 <script src="../../assets/js/demo.js"></script>
+<script src="../../assets/js/manager-script.js"></script>
 <script>
     var lineChart = document.getElementById('lineChart').getContext('2d');
     var myLineChart = new Chart(lineChart, {

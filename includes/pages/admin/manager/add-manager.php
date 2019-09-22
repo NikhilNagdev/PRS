@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="">Enter Date Of Birth</label>
-                                    <input type="password" id="password" class="form-control" name="password" required>
+                                    <input type="date" id="password" class="form-control" name="password" required>
                                 </div>
                                 </div>
                             </div>

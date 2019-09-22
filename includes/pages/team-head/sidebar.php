@@ -56,8 +56,6 @@ require_once ($_SERVER['DOCUMENT_ROOT']."document_root.php");
                     <h4 class="text-section">Components</h4>
                 </li>
 
-
-
                 <li class="nav-item">
                     <a data-toggle="collapse" href="#employees">
                         <i class="fas fa-users"></i>
@@ -68,6 +66,11 @@ require_once ($_SERVER['DOCUMENT_ROOT']."document_root.php");
                         <ul class="nav nav-collapse">
                             <li>
                                 <a href="tables/datatables.html">
+                                    <span class="sub-item">Assign Tasks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables/datatables.html">
                                     <span class="sub-item">View All Employee</span>
                                 </a>
                             </li>
@@ -76,21 +79,21 @@ require_once ($_SERVER['DOCUMENT_ROOT']."document_root.php");
                 </li>
 
                 <li class="nav-item">
-                    <a data-toggle="collapse" href="#tables">
-                        <i class="fas fa-chart-line"></i>
-                        <p>Ratings</p>
+                    <a data-toggle="collapse" href="#tasks">
+                        <i class="fas fa-tasks"></i>
+                        <p>Tasks</p>
                         <span class="caret"></span>
                     </a>
-                    <div class="collapse" id="tables">
+                    <div class="collapse" id="tasks">
                         <ul class="nav nav-collapse">
                             <li>
                                 <a href="tables/tables.html">
-                                    <span class="sub-item">Add Ratings</span>
+                                    <span class="sub-item">Add Tasks</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="tables/datatables.html">
-                                    <span class="sub-item">View All Ratings</span>
+                                    <span class="sub-item">View All Tasks</span>
                                 </a>
                             </li>
                         </ul>

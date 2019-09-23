@@ -3,31 +3,9 @@ require_once "../../document_root.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Azzara Bootstrap 4 Admin Dashboard</title>
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="../../assets/img/icon.ico" type="image/x-icon"/>
-
-    <!-- Fonts and icons -->
-    <script src="../../assets/js/plugin/webfont/webfont.min.js"></script>
-    <script>
-        WebFont.load({
-            google: {"families":["Open+Sans:300,400,600,700"]},
-            custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"], urls: ['../../assets/css/fonts.css']},
-            active: function() {
-                sessionStorage.fonts = true;
-            }
-        });
-    </script>
-
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../assets/css/azzara.min.css">
-
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" href="../../assets/css/demo.css">
-</head>
+<?php
+include_once($_SERVER['DOCUMENT_ROOT']."/includes/header.php");
+?>
 <body>
 <div class="wrapper">
     <!--
@@ -35,23 +13,9 @@ require_once "../../document_root.php";
     -->
     <div class="main-header" data-background-color="purple">
         <!-- Logo Header -->
-        <div class="logo-header">
-
-            <a href="index.html" class="logo">
-                <img src="../../assets/img/logoazzara.svg" alt="navbar brand" class="navbar-brand">
-            </a>
-            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon">
-						<i class="fa fa-bars"></i>
-					</span>
-            </button>
-            <button class="topbar-toggler more"><i class="fa fa-ellipsis-v"></i></button>
-            <div class="navbar-minimize">
-                <button class="btn btn-minimize btn-rounded">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </div>
-        </div>
+        <?php
+        include_once ($_SERVER['DOCUMENT_ROOT']."/includes/header-logo.php")
+        ?>
         <!-- End Logo Header -->
 
         <!-- Navbar Header -->

@@ -9,7 +9,7 @@
                     <h4 class="card-title">Employees</h4>
                 </div>
                 <div class="card-body">
-                    <form action="index.php?src=add-ratings" class="gray-form" method="post">
+                    <form action="index.php?src=add-emp-ratings" class="gray-form" method="post">
                         <div class="table-responsive">
                             <table id="view-all-drafted-quizzes" class="display table table-striped table-hover"
                                    style="width: 100%">
@@ -46,8 +46,15 @@ TEAM;
                                 }
                                 ?>
                                 </tbody>
+
                             </table>
+                            <br>
+                            <div class="">
+                                <button id="select-emp-id" class="proceed btn btn-primary" type="submit" name="submit">Proceed</button>
+                            </div>
                         </div>
+                        <br>
+
                     </form>
                 </div>
             </div>

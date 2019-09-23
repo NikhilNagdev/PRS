@@ -262,7 +262,9 @@ $empObj = new Employee();
             <?php
                 if(isset($_GET['src']) && $_GET['src'] == "add-rating"){
                     require_once $_SERVER['DOCUMENT_ROOT']."includes/pages/manager/rating/add-rating.php";
-                }else{
+                }elseif (isset($_GET['src']) && $_GET['src'] == "add-emp-ratings"){
+                    require_once $_SERVER['DOCUMENT_ROOT']."includes/pages/manager/rating/add-emp-ratings.php";
+                } else{
                     require_once $_SERVER['DOCUMENT_ROOT']."includes/pages/manager/dashboard.php";
                 }
             ?>
@@ -303,7 +305,7 @@ $empObj = new Employee();
 <script src="../../assets/js/plugin/datatables/datatables.min.js"></script>
 
 <!-- Bootstrap Notify -->
-<script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<!--<script src="../../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>-->
 
 <!-- Bootstrap Toggle -->
 <script src="../../assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>

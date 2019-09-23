@@ -31,5 +31,15 @@ class Employee
             ->fetchAll();
     }
 
+    //SELECT * FROM `employee` join user on user.user_id = employee.user_id where employee.emp_id = 1
+    public function getEmployeeById($emp_id){
+        return $this->employee
+            ->select("*")
+            ->join("user", "user.user_id", "employee.user_id")
+            ->where("employee.emp_id", $emp_id)
+            ->get()
+            ->fetch();
+    }
+
     private $employee;
 }

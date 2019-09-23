@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div class="modal-body modal-student-body">
-                <form action="index.php?src=add-quiz-question" method="post">
+                <form action="index.php?src=add-ratings" method="post">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
@@ -19,6 +19,7 @@
                                            style="width: 100%">
                                         <thead>
                                         <tr>
+                                            <th>Sr no</th>
                                             <th>Team no</th>
                                             <th>Team Name</th>
                                             <th>Description</th>
@@ -26,6 +27,23 @@
                                         </tr>
                                         </thead>
                                         <tbody class="student-data">
+                                        <?php
+                                        $teams = $teamObj->getTeams();
+                                        $index = 0;
+                                        foreach ($teams as $team){
+                                            $index++;
+                                            echo<<<TEAM
+                                                <tr>
+                                                <td>{$index}</td>
+                                                <td>{$team->team_id}</td>
+                                                <td>{$team->team_name}</td>
+                                                <td>{$team->team_description}</td>
+                                                <td><input name = "team_id" id="select-team-id" type="checkbox" value="{$team->team_id}"></td>
+                                            </tr>
+TEAM;
+
+                                        }
+                                        ?>
                                         </tbody>
                                     </table>
                                 </div>

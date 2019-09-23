@@ -1,5 +1,7 @@
 <?php
 require_once "../../document_root.php";
+require_once $_SERVER['DOCUMENT_ROOT']."database/models/Team.Class.php";
+$teamObj = new Team();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +32,6 @@ require_once "../../document_root.php";
 </head>
 <body>
 <div class="wrapper">
-    <!--
-        Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
-    -->
     <div class="main-header" data-background-color="purple">
         <!-- Logo Header -->
         <div class="logo-header">
@@ -247,137 +246,28 @@ require_once "../../document_root.php";
 
     <div class="main-panel">
         <div class="content">
-            <div class="page-inner">
-                <div class="page-header">
-                    <h4 class="page-title">Dashboard</h4>
-                    <div class="btn-group btn-group-page-header ml-auto">
-                        <button type="button" class="btn btn-light btn-round btn-page-header-dropdown dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-ellipsis-h"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                            <div class="arrow"></div>
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
+            <div class="panel-header bg-dark-gradient" style="background: linear-gradient(-45deg,#0a0b11,#1f283e)">
+                <div class="page-inner py-5">
+                    <div class="d-flex flex-column flex-md-row">
+                        <div>
+                        </div>
+                        <div class="text-white total-marks">
+                            <h2 class="pull-right">Dashboard<span class="marks-text"></span></h2>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body ">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-primary bubble-shadow-small">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Managers</p>
-                                            <h4 class="card-title">1,294</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-info bubble-shadow-small">
-                                            <i class="fas fa-users-cog"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Team Heads</p>
-                                            <h4 class="card-title">1303</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-success bubble-shadow-small">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Employees</p>
-                                            <h4 class="card-title">1,345</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="card card-stats card-round">
-                            <div class="card-body">
-                                <div class="row align-items-center">
-                                    <div class="col-icon">
-                                        <div class="icon-big text-center icon-secondary bubble-shadow-small">
-                                            <i class="far fa-check-circle"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col col-stats ml-3 ml-sm-0">
-                                        <div class="numbers">
-                                            <p class="card-category">Total Workers</p>
-                                            <h4 class="card-title">576</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-head-row">
-                                    <div class="card-title">Employee Statistics</div>
-                                    <div class="card-tools">
-                                        <a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
-												<span class="btn-label">
-													<i class="fa fa-pencil"></i>
-												</span>
-                                            Export
-                                        </a>
-                                        <a href="#" class="btn btn-info btn-border btn-round btn-sm">
-												<span class="btn-label">
-													<i class="fa fa-print"></i>
-												</span>
-                                            Print
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="chart-container" style="min-height: 375px">
-                                    <canvas id="lineChart"></canvas>
-                                </div>
-                                <div id="myChartLegend"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
+            <?php
+                if(isset($_GET['src']) && $_GET['src'] == "add-rating"){
+                    require_once $_SERVER['DOCUMENT_ROOT']."includes/pages/manager/rating/add-rating.php";
+                }else{
+                    require_once $_SERVER['DOCUMENT_ROOT']."includes/pages/manager/dashboard.php";
+                }
+            ?>
         </div>
-
     </div>
+
+</div>
 
 <?php
     include_once "../../includes/modals/add-ratings-modal.php";

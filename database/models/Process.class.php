@@ -27,16 +27,15 @@ class Process
             $user_id = $row['user_id'];
             $dbpassword = $row['password'];
             $name = $row['name'];
-            $role = $row['role'];
+            $role = $row['role_id'];
             if ($password == $dbpassword) {
-                echo "1 user found";
-                echo "<br>";
                 if (!isset($_SESSION['user_id'])) {
                     session_start();
                 }
                 $_SESSION['user_i+-d'] = $user_id;
                 $_SESSION['role'] = $role;
                 $_SESSION['name'] = $name;
+//                die(print_r($row));
                 if ($role == 2) {
                     header("Location:public/admin/index.php");
                 } elseif ($role == 3) {

@@ -30,6 +30,37 @@ $empObj = new Employee();
     <link rel="stylesheet" href="../../assets/css/azzara.min.css">
     <link rel="stylesheet" href="../../assets/css/manager-style.css">
 
+    <style>
+        #container1 {
+            margin-bottom: 120px;
+            padding:20px;
+            background-color:#f5f5f5;
+        }
+
+        .rating {
+            margin-left: 30px;
+        }
+
+        div.skill {
+            background: #5cb85c;
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+            padding: 3px 4px;
+        }
+
+        .skillLine {
+            display: inline-block;
+            width: 100%;
+            min-height: 90px;
+            padding: 3px 4px;
+        }
+
+        skillLineDefault {
+            padding: 3px 4px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/all.min.css" />
 
 </head>
 <body>
@@ -328,50 +359,79 @@ $empObj = new Employee();
 <script src="../../assets/js/demo.js"></script>
 <script src="../../assets/js/manager-script.js"></script>
 <script>
-    var lineChart = document.getElementById('lineChart').getContext('2d');
-    var myLineChart = new Chart(lineChart, {
-        type: 'line',
-        data: {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            datasets: [{
-                label: "Active Users",
-                borderColor: "#1d7af3",
-                pointBorderColor: "#FFF",
-                pointBackgroundColor: "#1d7af3",
-                pointBorderWidth: 2,
-                pointHoverRadius: 4,
-                pointHoverBorderWidth: 1,
-                pointRadius: 4,
-                backgroundColor: 'transparent',
-                fill: true,
-                borderWidth: 2,
-                data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
-            }]
-        },
-        options : {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                position: 'bottom',
-                labels : {
-                    padding: 10,
-                    fontColor: '#1d7af3',
-                }
-            },
-            tooltips: {
-                bodySpacing: 4,
-                mode:"nearest",
-                intersect: 0,
-                position:"nearest",
-                xPadding:10,
-                yPadding:10,
-                caretPadding:10
-            },
-            layout:{
-                padding:{left:15,right:15,top:15,bottom:15}
-            }
-        }
-    });
+    // var lineChart = document.getElementById('lineChart').getContext('2d');
+    // var myLineChart = new Chart(lineChart, {
+    //     type: 'line',
+    //     data: {
+    //         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    //         datasets: [{
+    //             label: "Active Users",
+    //             borderColor: "#1d7af3",
+    //             pointBorderColor: "#FFF",
+    //             pointBackgroundColor: "#1d7af3",
+    //             pointBorderWidth: 2,
+    //             pointHoverRadius: 4,
+    //             pointHoverBorderWidth: 1,
+    //             pointRadius: 4,
+    //             backgroundColor: 'transparent',
+    //             fill: true,
+    //             borderWidth: 2,
+    //             data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
+    //         }]
+    //     },
+    //     options : {
+    //         responsive: true,
+    //         maintainAspectRatio: false,
+    //         legend: {
+    //             position: 'bottom',
+    //             labels : {
+    //                 padding: 10,
+    //                 fontColor: '#1d7af3',
+    //             }
+    //         },
+    //         tooltips: {
+    //             bodySpacing: 4,
+    //             mode:"nearest",
+    //             intersect: 0,
+    //             position:"nearest",
+    //             xPadding:10,
+    //             yPadding:10,
+    //             caretPadding:10
+    //         },
+    //         layout:{
+    //             padding:{left:15,right:15,top:15,bottom:15}
+    //         }
+    //     }
+    // });
+    initializeRatings();
+
+    function initializeRatings() {
+        $('#rate1').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6.3,
+            markPreset: false
+        });
+        $('#rate2').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 6,
+            markPreset: false
+        });
+        $('#rate3').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 4.5,
+            markPreset: false
+        });
+        $('#rate4').shieldRating({
+            max: 7,
+            step: 0.1,
+            value: 5,
+            markPreset: false
+        });
+    }
 </script>
+<script type="text/javascript" src="../../assets/js/sheildui.js"></script>
 </body>
 </html>

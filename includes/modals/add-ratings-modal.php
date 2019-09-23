@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div class="modal-body modal-student-body">
-                <form action="index.php?src=add-ratings" method="post">
+                <form action="index.php?src=add-rating" method="POST">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
@@ -41,7 +41,6 @@
                                                 <td><input name = "team_id" id="select-team-id" type="checkbox" value="{$team->team_id}"></td>
                                             </tr>
 TEAM;
-
                                         }
                                         ?>
                                         </tbody>

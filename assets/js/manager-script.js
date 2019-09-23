@@ -44,9 +44,9 @@ $(document).ready(function () {
     });
 
     $('button#select-quiz-submit').on('click', function (e) {
-        if (!($('input#select-quiz-id').is(':checked'))) {
+        if (!($('input#select-team-id').is(':checked'))) {
             e.preventDefault();
-            swal("Please select a quiz first", {
+            swal("Please select a team first", {
                 icon: "warning",
                 buttons: {
                     confirm: {

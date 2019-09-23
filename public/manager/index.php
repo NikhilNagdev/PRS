@@ -1,7 +1,9 @@
 <?php
 require_once "../../document_root.php";
 require_once $_SERVER['DOCUMENT_ROOT']."database/models/Team.Class.php";
+require_once $_SERVER['DOCUMENT_ROOT']."database/models/Employee.Class.php";
 $teamObj = new Team();
+$empObj = new Employee();
 ?>
 <!DOCTYPE html>
 <html lang="en">

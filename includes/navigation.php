@@ -1,18 +1,6 @@
 <nav class="navbar navbar-header navbar-expand-lg">
 
     <div class="container-fluid">
-        <div class="collapse" id="search-nav">
-            <form class="navbar-left navbar-form nav-search mr-md-3">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <button type="submit" class="btn btn-search pr-1">
-                            <i class="fa fa-search search-icon"></i>
-                        </button>
-                    </div>
-                    <input type="text" placeholder="Search ..." class="form-control">
-                </div>
-            </form>
-        </div>
         <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
             <li class="nav-item toggle-nav-search hidden-caret">
                 <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
@@ -35,7 +23,7 @@
                             <div class="notif-center">
                                 <a href="#">
                                     <div class="notif-img">
-                                        <img src="../assets/img/jm_denis.jpg" alt="Img Profile">
+                                        <img src="../../../assets/img/jm_denis.jpg" alt="Img Profile">
                                     </div>
                                     <div class="notif-content">
                                         <span class="subject">Jimmy Denis</span>
@@ -47,7 +35,7 @@
                                 </a>
                                 <a href="#">
                                     <div class="notif-img">
-                                        <img src="../assets/img/chadengle.jpg" alt="Img Profile">
+                                        <img src="../../../assets/img/chadengle.jpg" alt="Img Profile">
                                     </div>
                                     <div class="notif-content">
                                         <span class="subject">Chad</span>
@@ -59,7 +47,7 @@
                                 </a>
                                 <a href="#">
                                     <div class="notif-img">
-                                        <img src="../assets/img/mlane.jpg" alt="Img Profile">
+                                        <img src="../../../assets/img/mlane.jpg" alt="Img Profile">
                                     </div>
                                     <div class="notif-content">
                                         <span class="subject">Jhon Doe</span>
@@ -71,7 +59,7 @@
                                 </a>
                                 <a href="#">
                                     <div class="notif-img">
-                                        <img src="../assets/img/talha.jpg" alt="Img Profile">
+                                        <img src="../../../../assets/img/talha.jpg" alt="Img Profile">
                                     </div>
                                     <div class="notif-content">
                                         <span class="subject">Talha</span>
@@ -121,7 +109,7 @@
                                 </a>
                                 <a href="#">
                                     <div class="notif-img">
-                                        <img src="../assets/img/profile2.jpg" alt="Img Profile">
+                                        <img src="../../../assets/img/profile2.jpg" alt="Img Profile">
                                     </div>
                                     <div class="notif-content">
 													<span class="block">
@@ -150,7 +138,7 @@
             <li class="nav-item dropdown hidden-caret">
                 <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                     <div class="avatar-sm">
-                        <img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+                        <img src="../../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-user animated fadeIn">

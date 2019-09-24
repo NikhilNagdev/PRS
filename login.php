@@ -1,103 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Login</title>
-    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-    <link rel="icon" href="assets/img/icon.ico" type="image/x-icon"/>
+<html>
+<?php
+include_once("document_root.php");
+if(isset($_POST['Login'])){
 
-    <!-- Fonts and icons -->
-    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
-    <script>
-        WebFont.load({
-            google: {"families":["Open+Sans:300,400,600,700"]},
-            custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"], urls: ['assets/css/fonts.css']},
-            active: function() {
-                sessionStorage.fonts = true;
-            }
-        });
-    </script>
-
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/azzara.min.css">
-</head>
+    echo "inside if";
+    include_once ($_SERVER['DOCUMENT_ROOT']."/database/models/Process.class.php");
+    $process = new Process();
+    $process->processLogin();
+}
+include_once($_SERVER['DOCUMENT_ROOT'] . "/database/models/Process.class.php");
+include_once("document_root.php");
+$page_title = "Login";
+include_once($_SERVER['DOCUMENT_ROOT'] . "/includes/header.php");
+?>
 <body class="login">
 <div class="wrapper wrapper-login">
     <div class="container container-login animated fadeIn">
         <h3 class="text-center">Sign In</h3>
         <div class="login-form">
-            <div class="form-group form-floating-label">
-                <input id="username" name="username" type="text" class="form-control input-border-bottom" required>
-                <label for="username" class="placeholder">Username</label>
-            </div>
-            <div class="form-group form-floating-label">
-                <input id="password" name="password" type="password" class="form-control input-border-bottom" required>
-                <label for="password" class="placeholder">Password</label>
-                <div class="show-password">
-                    <i class="flaticon-interface"></i>
+            <form method="post">
+                <div class="form-group">
+                    <label for="email" class="placeholder"><b>Email</b></label>
+                    <input id="email" name="email" type="email" class="form-control" required>
                 </div>
-            </div>
-            <div class="row form-sub m-0">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="rememberme">
-                    <label class="custom-control-label" for="rememberme">Remember Me</label>
+                <div class="form-group">
+                    <label for="password" class="placeholder"><b>Password</b></label>
+                    <a href="#" class="link float-right">Forget Password ?</a>
+                    <div class="position-relative">
+                        <input id="password" name="password" type="password" class="form-control" required>
+                        <div class="show-password">
+                            <i class="flaticon-interface"></i>
+                        </div>
+                    </div>
                 </div>
-
-                <a href="#" class="link float-right">Forget Password ?</a>
-            </div>
-            <div class="form-action mb-3">
-                <a href="#" class="btn btn-primary btn-rounded btn-login">Sign In</a>
-            </div>
-            <div class="login-account">
-                <span class="msg">Don't have an account yet ?</span>
-                <a href="#" id="show-signup" class="link">Sign Up</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="container container-signup animated fadeIn">
-        <h3 class="text-center">Sign Up</h3>
-        <div class="login-form">
-            <div class="form-group form-floating-label">
-                <input  id="fullname" name="fullname" type="text" class="form-control input-border-bottom" required>
-                <label for="fullname" class="placeholder">Fullname</label>
-            </div>
-            <div class="form-group form-floating-label">
-                <input  id="email" name="email" type="email" class="form-control input-border-bottom" required>
-                <label for="email" class="placeholder">Email</label>
-            </div>
-            <div class="form-group form-floating-label">
-                <input  id="passwordsignin" name="passwordsignin" type="password" class="form-control input-border-bottom" required>
-                <label for="passwordsignin" class="placeholder">Password</label>
-                <div class="show-password">
-                    <i class="flaticon-interface"></i>
+                <div class="form-group form-action-d-flex mb-3">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="rememberme">
+                        <label class="custom-control-label m-0" for="rememberme">Remember Me</label>
+                    </div>
+                    <button class="btn btn-primary col-md-5 float-right mt-3 mt-sm-0 fw-bold" name="Login" type="submit" id="Login">Sign In</button>
                 </div>
-            </div>
-            <div class="form-group form-floating-label">
-                <input  id="confirmpassword" name="confirmpassword" type="password" class="form-control input-border-bottom" required>
-                <label for="confirmpassword" class="placeholder">Confirm Password</label>
-                <div class="show-password">
-                    <i class="flaticon-interface"></i>
+                <!-- 				<div class="form-action">
+                    <a href="#" class="btn btn-primary btn-rounded btn-login">Sign In</a>
+                </div> -->
+                <div class="login-account">
+                    <span class="msg">Don't have an account yet ?</span>
+                    <a href="#" id="show-signup" class="link">Sign Up</a>
                 </div>
-            </div>
-            <div class="row form-sub m-0">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" name="agree" id="agree">
-                    <label class="custom-control-label" for="agree">I Agree the terms and conditions.</label>
-                </div>
-            </div>
-            <div class="form-action">
-                <a href="#" id="show-signin" class="btn btn-danger btn-rounded btn-login mr-3">Cancel</a>
-                <a href="#" class="btn btn-primary btn-rounded btn-login">Sign Up</a>
-            </div>
+            </form>
         </div>
     </div>
 </div>
-<script src="assets/js/core/jquery.3.2.1.min.js"></script>
-<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<script src="assets/js/core/popper.min.js"></script>
-<script src="assets/js/core/bootstrap.min.js"></script>
-<script src="assets/js/ready.js"></script>
+<?php
+include_once($_SERVER['DOCUMENT_ROOT'] . "/includes/core-scripts.php");
+?>
 </body>
 </html>
